@@ -35,7 +35,9 @@ const Favorites = (employeeToBookmark, employeeData) => {
   //   };
   return (
     <>
-      <h3>Bookmarked Employees</h3>
+      <h3 style={{ marginLeft: "-1050px", marginTop: "20px" }}>
+        Bookmarked Employees
+      </h3>
       {bookmarked.length === 0 ? (
         <p>No bookmarks</p>
       ) : (
