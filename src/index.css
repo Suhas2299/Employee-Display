@@ -17,8 +17,8 @@ code {
 .formInput{
   border-radius: 6px;
   width: 40vw;
-  height: 10vh;
-  margin: 18px;
+  height: 17vh;
+  /* margin: 10px; */
   font-size: 20px;
   border-color: #b1b0b0;
   
@@ -43,8 +43,9 @@ code {
   background-color: #0cb2ff;
   border-radius: 10px;
   width: 40vw;
-  height: 10vh;
+  height: 48px;
   color: white;
+  margin-top: 8px;
 
 }
 
@@ -80,7 +81,7 @@ code {
 }
 
 .search-btn{
-  /* margin-left: -60px; */
+  margin-left: 10px;
   height: 40px;
   width: 10vw;
   margin-bottom: 10px;
