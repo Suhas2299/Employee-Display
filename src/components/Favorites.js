@@ -41,7 +41,7 @@ const Favorites = (employeeToBookmark, employeeData) => {
       ) : (
         bookmarked?.map((employee) => (
           // <li key={employee?._id}>
-          <tbody>
+          <tbody key={employee?._id}>
             <tr>
               <td>
                 <span>{employee?.name}</span>

@@ -26,13 +26,13 @@ function EmployeeForm() {
       },
       body: JSON.stringify(newEmployee),
     });
-    console.log(data);
+    console.log("Employee Created", data.ok);
   };
 
   return (
     <div>
       {/* <h2>Create New Employee</h2> */}
-      <p>{data?.data.message}</p>
+      {/* {data} ? <p>{data.ok}</p> : <p></p> */}
       <form onSubmit={handleSubmit}>
         <div className="">
           <div>

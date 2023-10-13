@@ -17,7 +17,7 @@ function Sidebar() {
                 Employee List
               </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link className="navbar-brand" to="/favorites">
                 Bookmarked Employees
               </Link>
