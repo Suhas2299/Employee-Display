@@ -60,7 +60,7 @@ function EmployeeList({
                     <button
                       onClick={(e) => {
                         Favorites(employee);
-                        e.target.style.backgroundColor = "blue";
+                        e.target.style.backgroundColor = "#FFFF00";
                       }}
                       style={{ borderRadius: "10px", backgroundColor: "white" }}
                     >
@@ -92,7 +92,7 @@ function EmployeeList({
                     <button
                       onClick={(e) => {
                         Favorites(element);
-                        e.target.style.backgroundColor = "blue";
+                        e.target.style.backgroundColor = "#FFFF00";
                       }}
                       style={{ borderRadius: "10px", backgroundColor: "white" }}
                     >
