@@ -11,3 +11,87 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* add employee page */
+
+.formInput{
+  border-radius: 6px;
+  width: 40vw;
+  height: 10vh;
+  margin: 18px;
+  font-size: 20px;
+  border-color: #b1b0b0;
+  
+  
+
+}
+
+.formInput:focus {
+  border-color: #b1b0b0;
+  box-shadow: #69bfe7;
+}
+
+
+.img-logo{
+  margin: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+
+.add-button{
+  background-color: #0cb2ff;
+  border-radius: 10px;
+  width: 40vw;
+  height: 10vh;
+  color: white;
+
+}
+
+.add-button:hover{
+  background-color: #31c2fc;;
+
+}
+
+.bookmart-btn{
+  border-radius: 40px;
+}
+
+
+/* employee display */
+
+.emp-table-display{
+  /* display: flex; */
+  /* margin-left: 20vw; */
+  /* border: 2px solid black; */
+}
+
+.search-btn{
+  height: 4.6vh;
+  border-radius: 10px;
+  background-color: #0cb2ff;
+  
+}
+
+.search-bars{
+  margin-left: 40vw ;
+  margin-top: -60px;
+  margin-bottom: 28px;
+}
+
+.search-btn{
+  /* margin-left: -60px; */
+  height: 40px;
+  width: 10vw;
+  margin-bottom: 10px;
+}
+
+.search-btn:hover{
+  background-color: #45c1fa;
+}
+
+.formInput{
+  margin-top: 17px;
+  padding: 10px;
+  height: 40px;
+}
