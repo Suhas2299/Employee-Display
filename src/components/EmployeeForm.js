@@ -32,7 +32,7 @@ function EmployeeForm() {
   return (
     <div>
       {/* <h2>Create New Employee</h2> */}
-      {/* {data} ? <p>{data.ok}</p> : <p></p> */}
+      {/* {{ data.ok } && <p>Employee Created</p>} */}
       <form onSubmit={handleSubmit}>
         <div className="">
           <div>

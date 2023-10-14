@@ -5,6 +5,7 @@ function SearchBar({ searchEmployee }) {
 
   const handleSearch = () => {
     searchEmployee(searchTerm);
+    setSearchTerm("");
   };
 
   return (

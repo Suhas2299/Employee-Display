@@ -40,7 +40,7 @@ function App() {
       employee.name.toLowerCase().includes(name.toLowerCase())
     );
     console.log("search results in appjs search employee", results);
-    setSearchResults(results);
+    setSearchResults(results ? results : "No Results Found");
   };
 
   return (

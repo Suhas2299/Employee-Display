@@ -4,15 +4,37 @@ import { Link } from "react-router-dom";
 function Sidebar() {
   return (
     <div className="sidebar">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light ">
+        {/* <a class="navbar-brand" href="#">
+          <img
+            src="/ventriks-logo.png"
+            style={{ width: "160px", height: "40px" }}
+          />
+        </a> */}
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        {/*container-fluid*/}
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          {/* <div className=" collapse navbar-collapse" id="navbarNav"> */}
+
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item active">
+              {/*   className="nav-link"*/}
               <Link className="navbar-brand" to="/">
                 Home
               </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link className="navbar-brand" to="/employeeList">
                 Employee List
               </Link>
