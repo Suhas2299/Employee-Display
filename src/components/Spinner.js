@@ -3,7 +3,7 @@ import { Component } from "react";
 
 const Spinner = () => {
   return (
-    <div className="text-center">
+    <div className="text-center spinner">
       <iframe
         src="https://giphy.com/embed/VX7yEoXAFf8as"
         width="200"

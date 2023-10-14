@@ -1,5 +1,6 @@
 // import React, { useEffect, useState } from "react";
 import Favorites from "./Favorites";
+import Spinner from "./Spinner";
 function EmployeeList({
   deleteEmployee,
   employeeData,
@@ -25,7 +26,6 @@ function EmployeeList({
   // console.log("display deleted data in the list ", displayData);
   return (
     <div>
-      {/* <h2>Employee List</h2> */}
       <table className=" table emp-table-display">
         <thead>
           <tr>
@@ -37,7 +37,7 @@ function EmployeeList({
             <th>Bookmark</th>
           </tr>
         </thead>
-
+        {employeeData.length === 0 && <Spinner />}
         {employees.length === 0
           ? employeeData?.map((employee) => (
               <tbody>
