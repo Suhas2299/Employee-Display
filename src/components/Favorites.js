@@ -1,6 +1,6 @@
 import { useState } from "react";
 let bookmarked = [];
-const Favorites = (employeeToBookmark, employeeData) => {
+const Favorites = (employeeToBookmark) => {
   //   console.log(employeeToBookmark);
   //   console.log(employeeData);
   // const [bookmarkedEmployees, setBookmarkedEmployees] = useState([]);
@@ -46,7 +46,7 @@ const Favorites = (employeeToBookmark, employeeData) => {
           <tbody key={employee?._id}>
             <tr>
               <td>
-                <span>{employee?.name}</span>
+                <span style={{ fontFamily: "cursive" }}>{employee?.name}</span>
               </td>
               {/* <td>
                 <span>{employee?.address}</span>

@@ -1,11 +1,32 @@
 import React, { useState } from "react";
+import { useContext } from "react";
+import { MyContext } from "../context/UserContext";
 
-function SearchBar({ searchEmployee }) {
+// { searchEmployee }
+function SearchBar() {
+  const {
+    employeeData,
+    setEmployeeData,
+    searchResults,
+    setSearchResults,
+  } = useContext(MyContext);
+
+  const searchEmployee = (name) => {
+    console.log("search name in appjs search employee", name);
+    const results = employeeData.filter((employee) =>
+      employee.name.toLowerCase().includes(name.toLowerCase())
+    );
+    console.log("search results in appjs search employee", results);
+    setSearchResults(results ? results : "no results found");
+  };
+
+  let value = "search";
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearch = () => {
     searchEmployee(searchTerm);
     setSearchTerm("");
+    value = "Reset";
   };
 
   return (
@@ -18,7 +39,7 @@ function SearchBar({ searchEmployee }) {
         className="formInput"
       />
       <button onClick={handleSearch} className="search-btn">
-        Search
+        {value}
       </button>
     </div>
   );

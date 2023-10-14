@@ -7,6 +7,8 @@ import Sidebar from "./components/SideBar";
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
+import { useContext } from "./context/UserContext";
+import { MyContext } from "./context/UserContext";
 
 // import MarkList from "./components/MarkList";
 function App() {
@@ -34,40 +36,50 @@ function App() {
     setEmployees(updatedEmployees);
   };
 
-  const searchEmployee = (name) => {
-    console.log("search name in appjs search employee", name);
-    const results = employeeData.filter((employee) =>
-      employee.name.toLowerCase().includes(name.toLowerCase())
-    );
-    console.log("search results in appjs search employee", results);
-    setSearchResults(results ? results : "No Results Found");
-  };
+  // const searchEmployee = (name) => {
+  //   console.log("search name in appjs search employee", name);
+  //   const results = employeeData.filter((employee) =>
+  //     employee.name.toLowerCase().includes(name.toLowerCase())
+  //   );
+  //   console.log("search results in appjs search employee", results);
+  //   setSearchResults(results ? results : "No Results Found");
+  // };
 
   return (
     <div className="App">
-      <Router>
-        <Sidebar />
+      <MyContext.Provider
+        value={{
+          employeeData,
+          setEmployeeData,
+          searchResults,
+          setSearchResults,
+        }}
+      >
+        <Router>
+          <Sidebar />
 
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            <EmployeeForm />
-          </Route>
-          <Route exact path="/employeeList">
-            <SearchBar searchEmployee={searchEmployee} />
-            <EmployeeList
-              employeeData={employeeData}
-              employees={searchResults.length ? searchResults : employees}
-              deleteEmployee={deleteEmployee}
-              fetchMoreData={fetchMoreData}
-              // bookmarkEmployee={bookmarkEmployee}
-            />
-          </Route>
-          <Route exact path="/favorites">
-            <Favorites />
-          </Route>
-        </Switch>
-      </Router>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <EmployeeForm />
+            </Route>
+            <Route exact path="/employeeList">
+              {/* searchEmployee={searchEmployee} */}
+              <SearchBar />
+              <EmployeeList
+                employeeData={employeeData}
+                employees={searchResults.length ? searchResults : employees}
+                deleteEmployee={deleteEmployee}
+                fetchMoreData={fetchMoreData}
+                // bookmarkEmployee={bookmarkEmployee}
+              />
+            </Route>
+            <Route exact path="/favorites">
+              <Favorites />
+            </Route>
+          </Switch>
+        </Router>
+      </MyContext.Provider>
     </div>
   );
 }

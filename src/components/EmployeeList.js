@@ -7,7 +7,7 @@ function EmployeeList({
   fetchMoreData,
   employees,
 }) {
-  // const [displayData, setDisplayData] = useState([]);
+  //  const [displayData, setDisplayData] = useState(em);
   const data = employeeData;
   async function deleteEmployee(employeeid) {
     let url = `https://dev.ventriksapi1.com/openapi/deleteEmployee?_id=${employeeid}`;

@@ -1,19 +1,23 @@
-import React from "react";
+import { createContext } from "react";
 
-const UserContext = React.createContext();
+export const MyContext = createContext("");
 
-export default UserContext;
+// import React from "react";
 
-const UserContextProvider = ({ props }) => {
-  const [displayData, setDisplayData] = useState([]);
+// const UserContext = React.createContext();
 
-  return (
-    <UserContext.Provider
-      value={{
-        displayData,
-      }}
-    >
-      {props.children}
-    </UserContext.Provider>
-  );
-};
+// export default UserContext;
+
+// const UserContextProvider = ({ props }) => {
+//   const [displayData, setDisplayData] = useState([]);
+
+//   return (
+//     <UserContext.Provider
+//       value={{
+//         displayData,
+//       }}
+//     >
+//       {props.children}
+//     </UserContext.Provider>
+//   );
+// };
