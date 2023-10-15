@@ -9,6 +9,7 @@ import SearchBar from "./components/SearchBar";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import { useContext } from "./context/UserContext";
 import { MyContext } from "./context/UserContext";
+import axios from "axios";
 
 // import MarkList from "./components/MarkList";
 function App() {
@@ -18,11 +19,15 @@ function App() {
   let [employeeData, setEmployeeData] = useState([]);
 
   const fetchMoreData = async () => {
-    let url = `https://dev.ventriksapi1.com/openapi/getAllEmployees?&skip=0&limit=900`;
-    let data = await fetch(url);
-    let parsedData = await data.json();
-    console.log(parsedData.data.records);
-    setEmployeeData(parsedData.data.records);
+    // let url = process.env.URL_ENDPOINT;
+    let url =
+      "https://dev.ventriksapi1.com/openapi/getAllEmployees?&skip=0&limit=900";
+    let parsedData = await axios.get(url);
+    // let parsedData = await data.json();
+    // console.log(parsedData.data.records);
+    console.log(parsedData.data.data.records);
+
+    setEmployeeData(parsedData.data.data.records);
   };
 
   useEffect(() => {

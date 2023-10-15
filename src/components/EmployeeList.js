@@ -25,7 +25,7 @@ function EmployeeList({
   }
   // console.log("display deleted data in the list ", displayData);
   return (
-    <div>
+    <>
       <table className=" table emp-table-display">
         <thead>
           <tr>
@@ -104,7 +104,7 @@ function EmployeeList({
               </>
             ))}
       </table>
-    </div>
+    </>
   );
 }
 export default EmployeeList;

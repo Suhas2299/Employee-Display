@@ -11,17 +11,17 @@ function SearchBar() {
     setSearchResults,
   } = useContext(MyContext);
 
+  let value = "search";
+  const [searchTerm, setSearchTerm] = useState("");
+
   const searchEmployee = (name) => {
     console.log("search name in appjs search employee", name);
     const results = employeeData.filter((employee) =>
       employee.name.toLowerCase().includes(name.toLowerCase())
     );
     console.log("search results in appjs search employee", results);
-    setSearchResults(results ? results : "no results found");
+    setSearchResults(results ? results : "No Results Found");
   };
-
-  let value = "search";
-  const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearch = () => {
     searchEmployee(searchTerm);
