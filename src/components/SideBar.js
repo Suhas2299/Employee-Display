@@ -5,12 +5,6 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <nav className="navbar navbar-expand-lg navbar-light bg-light ">
-        {/* <a class="navbar-brand" href="#">
-          <img
-            src="/ventriks-logo.png"
-            style={{ width: "160px", height: "40px" }}
-          />
-        </a> */}
         <button
           className="navbar-toggler"
           type="button"

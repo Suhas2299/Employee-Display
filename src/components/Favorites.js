@@ -1,3 +1,42 @@
+const Favorites = (employeeToBookmark) => {
+  // const { favorites, setFavorites } = useContext(MyContext);
+  const storedFavorites = JSON.parse(localStorage.getItem("favorites"));
+  if (storedFavorites) {
+    console.log("at stored favorites", storedFavorites);
+  }
+  return (
+    <>
+      <h4>BookMarks</h4>
+      <table className=" table emp-table-display">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Age</th>
+            <th>Role</th>
+          </tr>
+        </thead>
+        {storedFavorites?.map((element) => {
+          return (
+            <>
+              <tbody>
+                <tr key={element._id}>
+                  <td>{element.name}</td>
+                  <td>{element.address}</td>
+                  <td>{element.age}</td>
+                  <td>{element.role}</td>
+                </tr>
+              </tbody>
+            </>
+          );
+        })}
+      </table>
+    </>
+  );
+};
+
+export default Favorites;
+
 // import { useState } from "react";
 // let bookmarked = [];
 // const Favorites = (employeeToBookmark) => {
@@ -76,42 +115,3 @@
 
 // import { MyContext } from "../context/UserContext";
 // import { useContext } from "react";
-
-const Favorites = (employeeToBookmark) => {
-  // const { favorites, setFavorites } = useContext(MyContext);
-  const storedFavorites = JSON.parse(localStorage.getItem("favorites"));
-  if (storedFavorites) {
-    console.log("at stored favorites", storedFavorites);
-  }
-  return (
-    <>
-      <h4>BookMarks</h4>
-      <table className=" table emp-table-display">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Address</th>
-            <th>Age</th>
-            <th>Role</th>
-          </tr>
-        </thead>
-        {storedFavorites?.map((element) => {
-          return (
-            <>
-              <tbody>
-                <tr key={element._id}>
-                  <td>{element.name}</td>
-                  <td>{element.address}</td>
-                  <td>{element.age}</td>
-                  <td>{element.role}</td>
-                </tr>
-              </tbody>
-            </>
-          );
-        })}
-      </table>
-    </>
-  );
-};
-
-export default Favorites;

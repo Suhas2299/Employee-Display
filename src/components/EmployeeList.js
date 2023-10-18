@@ -114,24 +114,25 @@ function EmployeeList({
             ))
           : employees?.map((element) => (
               <>
-                <tr key={element._id}>
-                  <td className="vw-10">{element.name}</td>
-                  <td>{element.address}</td>
-                  <td>{element.age}</td>
-                  <td>{element.role}</td>
-                  <td>
-                    <button
-                      onClick={(e) => {
-                        deleteEmployee(element._id);
-                        e.target.style.backgroundColor = "red";
-                      }}
-                      className="btn"
-                    >
-                      Delete
-                    </button>
-                  </td>
-                  <td>
-                    {/* <button
+                <tbody>
+                  <tr key={element._id}>
+                    <td className="vw-10">{element.name}</td>
+                    <td>{element.address}</td>
+                    <td>{element.age}</td>
+                    <td>{element.role}</td>
+                    <td>
+                      <button
+                        onClick={(e) => {
+                          deleteEmployee(element._id);
+                          e.target.style.backgroundColor = "red";
+                        }}
+                        className="btn"
+                      >
+                        Delete
+                      </button>
+                    </td>
+                    <td>
+                      {/* <button
                       onClick={(e) => {
                         Favorites(element);
                         e.target.style.backgroundColor = "#FFFF00";
@@ -140,9 +141,10 @@ function EmployeeList({
                     >
                       Bookmark
                     </button> */}
-                    <Mark favemployees={element} />
-                  </td>
-                </tr>
+                      <Mark favemployees={element} />
+                    </td>
+                  </tr>
+                </tbody>
               </>
             ))}
       </table>

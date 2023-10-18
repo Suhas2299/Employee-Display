@@ -12,7 +12,9 @@ const Pagination = ({ employeescount, traverseData, employeesDisplayed }) => {
       <div className="pagination">
         {pageNumbers.map((number) => (
           <div key={number} className="pagination-child">
-            <button onClick={() => traverseData(number)}>{number}</button>
+            <button className="btn" onClick={() => traverseData(number)}>
+              {number}
+            </button>
           </div>
         ))}
       </div>

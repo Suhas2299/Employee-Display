@@ -1,6 +1,6 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
 
 
 
@@ -109,9 +109,9 @@ code {
 }
 
 .pagination{
-  margin-left: 40vw;
+  margin-left: 46vw;
   display: flex;
-  margin-top: 10vh;
+  margin-top: 8vh;
   
   width: 100px;
 }

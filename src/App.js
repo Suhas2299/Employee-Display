@@ -10,6 +10,7 @@ import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import { useContext } from "./context/UserContext";
 import { MyContext } from "./context/UserContext";
 import axios from "axios";
+import Nav from "./components/Nav";
 
 // import MarkList from "./components/MarkList";
 function App() {
@@ -64,7 +65,8 @@ function App() {
         }}
       >
         <Router>
-          <Sidebar />
+          {/* <Sidebar /> */}
+          <Nav />
 
           <Header />
           <Switch>

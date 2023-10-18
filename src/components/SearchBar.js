@@ -47,6 +47,12 @@ function SearchBar({ displayData }) {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         className="formInput"
+        style={{
+          width: "400px",
+          height: "38px",
+          outline: "none",
+          borderBottom: "2px solid black",
+        }}
       />
       {/* <button onClick={handleSearch} className="search-btn">
         {value}
