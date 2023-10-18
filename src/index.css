@@ -109,9 +109,9 @@ code {
 }
 
 .pagination{
-  margin-left: 46vw;
+  margin-left: 40vw;
   display: flex;
-  margin-top: 8vh;
+  margin-top: 4vh;
   
   width: 100px;
 }

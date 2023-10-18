@@ -120,7 +120,7 @@ function EmployeeForm() {
 
   return (
     <div>
-      <div style={{ marginTop: "6vw", marginLeft: "36vw", width: "800px" }}>
+      <div style={{ marginTop: "6vw", marginLeft: "28vw", width: "800px" }}>
         <form
           // className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
           onSubmit={handleSubmit}
