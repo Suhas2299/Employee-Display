@@ -51,7 +51,7 @@ function Mark({ favemployees }) {
           <button
             onClick={() => toggleFavorite(favemployees)}
             style={{ borderRadius: "10px", backgroundColor: "white" }}
-            className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+            className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 border border-gray-400 rounded shadow"
           >
             {favorites?.some((fav) => fav._id === favemployees._id)
               ? "unbookmark"

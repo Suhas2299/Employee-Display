@@ -6,7 +6,7 @@ const Favorites = (employeeToBookmark) => {
   }
   return (
     <>
-      <h4>BookMarks</h4>
+      <h1>BookMarks</h1>
       <table className=" table emp-table-display">
         <thead>
           <tr>

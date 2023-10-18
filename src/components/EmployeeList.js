@@ -92,7 +92,7 @@ function EmployeeList({
                         deleteEmployee(employee._id);
                         e.target.style.backgroundColor = "red";
                       }}
-                      className="btn"
+                      className="btn border border-gray-400 rounded shadow"
                     >
                       Delete
                     </button>
@@ -126,7 +126,7 @@ function EmployeeList({
                           deleteEmployee(element._id);
                           e.target.style.backgroundColor = "red";
                         }}
-                        className="btn"
+                        className="btn border border-gray-400 rounded shadow"
                       >
                         Delete
                       </button>
