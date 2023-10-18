@@ -13,10 +13,11 @@ import axios from "axios";
 
 // import MarkList from "./components/MarkList";
 function App() {
-  const [employees, setEmployees] = useState([]);
+  // const [employees, setEmployees] = useState([]);
   // const [bookmarkedEmployees, setBookmarkedEmployees] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
   let [employeeData, setEmployeeData] = useState([]);
+  const [favorites, setFavorites] = useState([]);
 
   const fetchMoreData = async () => {
     // let url = process.env.URL_ENDPOINT;
@@ -24,7 +25,7 @@ function App() {
       "https://dev.ventriksapi1.com/openapi/getAllEmployees?&skip=0&limit=900";
     let parsedData = await axios.get(url);
     // let parsedData = await data.json();
-    // console.log(parsedData.data.records);
+    console.log(parsedData.data.records);
     console.log(parsedData.data.data.records);
 
     setEmployeeData(parsedData.data.data.records);
@@ -34,12 +35,12 @@ function App() {
     fetchMoreData();
   }, []);
 
-  const deleteEmployee = (employeeId) => {
-    const updatedEmployees = employees.filter(
-      (employee) => employee.id !== employeeId
-    );
-    setEmployees(updatedEmployees);
-  };
+  // const deleteEmployee = (employeeId) => {
+  //   const updatedEmployees = employees.filter(
+  //     (employee) => employee.id !== employeeId
+  //   );
+  //   setEmployees(updatedEmployees);
+  // };
 
   // const searchEmployee = (name) => {
   //   console.log("search name in appjs search employee", name);
@@ -58,6 +59,8 @@ function App() {
           setEmployeeData,
           searchResults,
           setSearchResults,
+          favorites,
+          setFavorites,
         }}
       >
         <Router>
@@ -70,12 +73,14 @@ function App() {
             </Route>
             <Route exact path="/employeeList">
               {/* searchEmployee={searchEmployee} */}
-              <SearchBar />
+              {/* <SearchBar /> */}
               <EmployeeList
-                employeeData={employeeData}
-                employees={searchResults.length ? searchResults : employees}
-                deleteEmployee={deleteEmployee}
-                fetchMoreData={fetchMoreData}
+                // employeeData={employeeData}
+                // employees={searchResults.length ? searchResults : employees}
+                employees={searchResults}
+                setEmployees={setSearchResults}
+                // deleteEmployee={deleteEmployee}
+                // fetchMoreData={fetchMoreData}
                 // bookmarkEmployee={bookmarkEmployee}
               />
             </Route>

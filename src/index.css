@@ -1,3 +1,9 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -100,4 +106,29 @@ code {
 .spinner{
   margin-left: 40vw;
   margin-top: 80px;
+}
+
+.pagination{
+  margin-left: 40vw;
+  display: flex;
+  margin-top: 10vh;
+  
+  width: 100px;
+}
+
+.pagination-child{
+  /* border: 2px solid black; */
+  padding: 10px;
+
+}
+
+.pagination-child button {
+  border-radius: 10px;
+  background-color: white;
+}
+
+.pagination-child button:hover {
+  border-radius: 10px;
+  background-color: yellow;
+
 }
