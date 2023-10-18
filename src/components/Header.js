@@ -7,7 +7,7 @@ function Header() {
         src="/ventriks-logo.png"
         alt="Ventriks Logo"
         width="180px"
-        height="50px"
+        height="28px"
         className="img-logo"
       />
     </header>
